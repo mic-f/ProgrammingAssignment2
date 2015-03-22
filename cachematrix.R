@@ -1,12 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-### The following functions checks whether two matrices are the same
+### The following function checks whether two matrices are the same
+### It returns TRUE if they're the same and FALSE otherwise
 matequal <- function(x, y) {
     is.matrix(x) && is.matrix(y) && dim(x) == dim(y) && all(x == y)   
 }
 
-## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
 ### This function is very similar to the function from given example
@@ -26,10 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
+    ## This function returns a matrix that is the inverse of "matrix" x (in fact the type of 
+    ## argument x is list)
     inverse <- x$getinverse()
     ### If inverse was already computed, we take it from "matrix" x
     if(!is.null(inverse)) {
